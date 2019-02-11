@@ -1,0 +1,22 @@
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% bootstrap_css %}
+</head>
+<body>
+    <a href="{% url 'movies:list' %}">인덱스</a>
+    <a href="{% url 'movies:create' %}">글작성</a>
+    <a href="{% url 'movies:form_create' %}">폼으로글작성</a>
+    <a href="{% url 'movies:model_form_create' %}">모델폼으로글작성</a>
+    <div class="container">
+    {% block bb %}
+    {% endblock %}
+    </div>
+</body>
+</html>
